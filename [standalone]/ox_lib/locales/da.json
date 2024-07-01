@@ -1,0 +1,33 @@
+{
+  "language": "Dansk",
+  "settings": "Indstillinger",
+  "ui": {
+    "cancel": "Annuller",
+    "close": "Luk",
+    "confirm": "Bekræft",
+    "more": "Mere...",
+    "settings": {
+      "locale": "Change locale",
+      "locale_description": "Current language: ${language} (%s)",
+      "notification_audio": "Notification audio",
+      "notification_position": "Notification position"
+    },
+    "position": {
+      "bottom": "Bottom",
+      "bottom-left": "Bottom-left",
+      "bottom-right": "Bottom-right",
+      "center-left": "Center-left",
+      "center-right": "Center-right",
+      "top": "Top",
+      "top-left": "Top-left",
+      "top-right": "Top-right"
+    }
+  },
+  "open_radial_menu": "Open radial menu",
+  "cancel_progress": "Cancel current progress bar",
+  "txadmin_announcement": "Servermeddelelse af %s",
+  "txadmin_dm": "Direkte besked fra %s",
+  "txadmin_warn": "Du er blevet advaret af %s",
+  "txadmin_warn_content": "%s  \nHandlings-id: %s",
+  "txadmin_scheduledrestart": "Planlagt genstart"
+}

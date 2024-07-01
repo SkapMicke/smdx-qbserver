@@ -1,0 +1,136 @@
+body {
+  margin-top: 16px;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  margin-left: 10px; 
+}
+
+.toast {
+  width: 150px;
+  float: right;
+}
+
+.wrapper {
+  width: 100px;
+  height: auto;
+  background-color: #1e1e1e;
+  float: right;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  margin-right: 10px;
+}
+
+.main {
+  margin: 10px 16px 12px 30px;
+  position: relative;
+}
+
+.main::before {
+  font-size: 24px;
+  top: calc(50% - 12px);
+  left: -30px;
+  line-height: 24px;
+  position: absolute;
+}
+
+.success, .info, .warning, .error, .phonemessage, .neutral {
+  padding: 8px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.733);
+  background-size: 400% 400%;
+  animation: gradientChange 5s ease infinite, popIn 0.5s ease forwards;
+}
+
+.success {
+  color: #c3ddfd;
+  border: 3px solid rgb(51, 255, 0); 
+  background: linear-gradient(to right, #73ff0085, #020202, #020202);
+}
+
+.success::before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  color: #0ee769;
+  margin-right: 10px;
+  background: linear-gradient(to right, #4b6cb7, #182848); 
+}
+
+.info {
+  color: #ffffff;
+  border: 3px solid rgb(17, 0, 255); 
+  background: linear-gradient(to right, #02156d, #020202, #020202);
+}
+
+.info::before {
+  content: "\f05a";
+  font-family: "Font Awesome 5 Free";
+  color: #0751c0;
+  margin-right: 3px;
+}
+
+.warning {
+  color: #e9e5db;
+  border: 3px solid rgb(225, 255, 0);
+  background: linear-gradient(to right, #554f02, #020202, #020202);
+}
+
+.warning::before {
+  content: "\f071";
+  font-family: "Font Awesome 5 Free";
+  color: #ffc107;
+  margin-right: 3px;
+}
+
+.error {
+  color: #ddc8c8;
+  border: 3px solid rgb(255, 0, 0); 
+  background: linear-gradient(to right, #4e0505, #020202, #020202);
+}
+
+.error::before {
+  content: "\f06a";
+  font-family: "Font Awesome 5 Free";
+  color: #dc3545;
+  margin-right: 3px;
+}
+
+.phonemessage-icon::before {
+  content: "\f7cd";
+  font-family: "Font Awesome 5 Free";
+  color: #f38847;
+}
+
+.phonemessage {
+  color: #fff;
+  border-left: 4px solid #f38847; 
+  background-color: rgba(20, 20, 20, 0.85);
+}
+
+.neutral-icon::before {
+  content: "\f11c";
+  font-family: "Font Awesome 5 Free";
+  color: #6c757d;
+}
+
+.neutral {
+  color: #fff;
+  border-left: 4px solid #6c757d;
+  background-color: rgba(20, 20, 20, 0.85);
+}
+
+.neutral-border {
+  border-left: 4px solid #6c757d;
+}
+
+@keyframes gradientChange {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 1; }
+}

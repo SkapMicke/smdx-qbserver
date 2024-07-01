@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+html {
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: transparent !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.progress-container {
+    display: none;
+    z-index: 5;
+    color: #fff;
+    width: 15%;
+    position: fixed;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#progress-label {
+    font-size: 1.3vh;
+    line-height: 4vh;
+    position: relative;
+    color: #ffffff;
+    z-index: 10;
+    font-weight: bold;
+}
+
+#progress-percentage {
+    font-size: 1.3vh;
+    line-height: 4vh;
+    position: relative;
+    color: #ffffff;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.progress-bar-container {
+    background: rgba(0, 0, 0, 0.246);
+    height: 0.5vh;
+    position: relative;
+    display: block;
+    border-radius: 2px;
+}
+
+#progress-bar {
+    background-color: #dc143c;
+    width: 0%;
+    height: 0.5vh;
+    border-radius: 2px;
+    transition: width 0.3s;
+    transition-timing-function: ease-out;
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.6);
+}

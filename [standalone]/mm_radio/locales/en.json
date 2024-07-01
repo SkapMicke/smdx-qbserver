@@ -1,0 +1,31 @@
+{
+    "join_notify_description": "Joined Station %.2f MHz",
+    "invalid_notify_description": "Station %.2f MHz is not available",
+    "already_notify_description": "You are already joined to Station %.2f MHz",
+    "restricted_notify_description": "You are not allowed to join Station %.2f MHz",
+    "volume_notify_description": "Volume set to %d%%",
+    "unsuccess_name": "Failed To Change Name",
+    "jammer_notify_description": "Failed to Connect to Station %.2f MHz",
+    "toggle_defean": "Radio Deafened",
+    "toggle_undeafen": "Radio Undeafened",
+    
+    "ui": {
+        "header": "IN RADIO",
+        "frequency": "Frequency",
+        "disconnect": "DISCONNECT",
+        "notconnected": "NOT CONNECTED",
+        "channels": "Channels",
+        "radio": "Radio",
+        "members": "Members",
+        "favorites": "Favorites",
+        "recommended": "Recommended",
+        "clear": "CLEAR",
+        "hide_overlay": "HIDE OVERLAY",
+        "show_overlay": "SHOW OVERLAY",
+        "save": "SAVE",
+        "radio_settings": "Radio Settings",
+        "move_radio": "Move Radio",
+        "allow_move": "Allow Move",
+        "overlay_settings": "Overlay Settings"
+    }
+}
