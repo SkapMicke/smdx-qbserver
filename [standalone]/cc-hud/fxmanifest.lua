@@ -1,5 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
 author 'CC'
 description 'CC HUD Script'
@@ -22,5 +23,5 @@ files {
 	'html/*',
 }
 
-lua54 'no'
+
 use_fxv2_oal 'yes'

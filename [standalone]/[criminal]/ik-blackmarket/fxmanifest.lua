@@ -4,6 +4,7 @@ version "2.0.1"
 description "Blackmarket script by Proportions#8460"
 fx_version "cerulean"
 game "gta5"
+lua54 'yes'
 
 dependencies { 'qb-input', 'qb-menu', 'qb-target' }
 client_scripts { 'client.lua' }
@@ -22,4 +23,3 @@ files {
 	'html/sound/*.ogg',
 }
 
-'

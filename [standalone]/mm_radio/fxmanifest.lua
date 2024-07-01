@@ -1,12 +1,13 @@
 fx_version 'cerulean'
 game "gta5"
+lua54 'yes'
 
 author "Master Mind"
 version '2.0.6'
 description 'A beautiful Radio Resource for FiveM'
 repository 'https://github.com/SOH69/mm_radio'
 
-'
+
 
 ui_page 'build/index.html'
 -- ui_page 'http://localhost:3000/' --for dev

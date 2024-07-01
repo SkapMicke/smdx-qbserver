@@ -1,6 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
-'
+lua54 'yes'
+
 use_fxv2_oal 'yes'
 author 'Kakarot'
 description 'Allows players to be jailed, escape from jail and work in jail'

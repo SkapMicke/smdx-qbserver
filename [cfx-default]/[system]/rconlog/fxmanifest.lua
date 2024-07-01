@@ -8,7 +8,7 @@ repository 'https://github.com/citizenfx/cfx-server-data'
 
 client_script 'rconlog_client.lua'
 server_script 'rconlog_server.lua'
-'
+lua54 'yes'
 
 fx_version 'adamant'
 games { 'gta5', 'rdr3' }

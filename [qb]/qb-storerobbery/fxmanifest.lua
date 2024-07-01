@@ -1,6 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
-'
+lua54 'yes'
+
 author 'Kakarot'
 description 'Allows players to rob various stores on the map for money and items'
 version '1.2.0'

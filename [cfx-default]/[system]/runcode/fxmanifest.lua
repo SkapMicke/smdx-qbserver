@@ -8,7 +8,7 @@ repository 'https://github.com/citizenfx/cfx-server-data'
 
 game 'common'
 fx_version 'bodacious'
-'
+lua54 'yes'
 
 client_script 'runcode_cl.lua'
 server_script 'runcode_sv.lua'

@@ -1,5 +1,5 @@
 game 'common'
-
+lua54 'yes'
 fx_version 'cerulean'
 author 'AvarianKnight'
 description 'VOIP built using FiveM\'s built in mumble.'
@@ -8,7 +8,7 @@ dependencies {
 	'/onesync',
 }
 
-'
+
 
 shared_script 'shared.lua'
 

@@ -1,6 +1,7 @@
 fx_version 'bodacious'
 game 'gta5'
-'
+lua54 'yes'
+
 author 'Kakarot'
 description 'Allows players to access a phone to interact with various apps and features'
 version '1.3.0'

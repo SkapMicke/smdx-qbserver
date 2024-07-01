@@ -4,6 +4,7 @@
 
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
 author 'Bob_74'
 description 'Load and customize your map'

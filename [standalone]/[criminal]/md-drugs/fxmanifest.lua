@@ -3,6 +3,7 @@ author "mustache_dom"
 description "drugs by mustache dom"
 fx_version "cerulean"
 game "gta5"
+lua54 'yes'
 version  '3.0.0'
 client_scripts {
 	'client/**.lua',
@@ -22,7 +23,7 @@ shared_scripts {
 }
 
 
-'
+
 
 
 dependency 'bob74_ipl'

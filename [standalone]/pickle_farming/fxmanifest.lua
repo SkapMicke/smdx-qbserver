@@ -1,5 +1,6 @@
 fx_version "cerulean"
 game "gta5"
+lua54 'yes'
 author "Pickle Mods#0001"
 description "A multi-framework farming resource with synced growth."
 version "v1.0.7"
@@ -26,4 +27,4 @@ server_scripts {
 	"core/server.lua"
 }
 
-'
+

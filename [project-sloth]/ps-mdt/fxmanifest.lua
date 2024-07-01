@@ -5,7 +5,7 @@ author 'Flawws, Flakey, Idris and the Project Sloth team'
 description 'EchoRP MDT Rewrite for QBCore'
 version '2.6.6'
 
-'
+lua54 'yes'
 
 shared_script 'shared/config.lua'
 
@@ -20,7 +20,7 @@ client_scripts{
     'client/cl_impound.lua',
     'client/cl_mugshot.lua'
 } 
-
+lua54 'yes'
 ui_page 'ui/dashboard.html'
 
 files {
@@ -31,14 +31,4 @@ files {
     'ui/style.css',
 }
 
-escrow_ignore {
-	'shared/config.lua',
-	'client/cl_impound.lua',
-	'cöient/cl_mugshot.lua',
-	'server/dbm.lua',
-	'server/main.lua',
-	'server/utils.lua',
-    'ui/app.js',
-    'ui/dashboard.html',
-    'ui/style.css',
-}
+

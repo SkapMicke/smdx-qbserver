@@ -1,6 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
-'
+lua54 'yes'
+
 author 'Kakarot'
 description 'Allows players to work as a taxi driver and pickup npcs around the map'
 version '1.2.0'

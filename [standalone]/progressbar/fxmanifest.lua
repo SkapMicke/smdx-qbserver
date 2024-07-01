@@ -1,6 +1,7 @@
 fx_version 'cerulean'
-'
+
 game 'gta5'
+lua54 'yes'
 
 author 'qbcore-framework'
 description 'Dependency for creating progressbars in QB-Core.'

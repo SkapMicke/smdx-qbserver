@@ -1,5 +1,6 @@
 fx_version "cerulean"
 game "gta5"
+lua54 'yes'
 author "Pickle Mods"
 version "v1.1.6"
 

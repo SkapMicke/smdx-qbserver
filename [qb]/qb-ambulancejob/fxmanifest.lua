@@ -1,5 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
 description 'QB-AmbulanceJob customized for majestic deathscreen'
 version '1.2.4'
@@ -27,4 +28,4 @@ server_scripts {
     'server/main.lua'
 }
 
-'
+

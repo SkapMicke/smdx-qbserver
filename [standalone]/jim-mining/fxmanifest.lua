@@ -4,9 +4,9 @@ version "v2.4.3"
 description "Mining Script By Jimathy"
 fx_version "cerulean"
 game "gta5"
+lua54 'yes'
 
 shared_scripts { 'config.lua', 'shared/*.lua', 'locales/*.lua' }
 server_script { 'server.lua' }
 client_scripts { 'client.lua' }
 
-'

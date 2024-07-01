@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'common'
 use_experimental_fxv2_oal 'yes'
-'
+lua54 'yes'
 
 name 'oxmysql'
 author 'Overextended'

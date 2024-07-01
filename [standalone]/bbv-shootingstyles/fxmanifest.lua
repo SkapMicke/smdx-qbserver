@@ -1,5 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
 description 'bbv-shootingstyles'
 version '1.0.0'
@@ -17,4 +18,3 @@ files {
     'html/images/*.png'
 }
 
-'

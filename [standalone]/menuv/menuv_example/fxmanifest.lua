@@ -10,6 +10,7 @@
 
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
 name 'MenuV'
 version '1.4.1'

@@ -1,6 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
-'
+lua54 'yes'
+
 author 'Kakarot'
 description 'A menu providing players the ability to change their clothing and accessories'
 version '1.2.0'

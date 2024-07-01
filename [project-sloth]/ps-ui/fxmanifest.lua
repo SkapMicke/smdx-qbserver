@@ -5,7 +5,7 @@ description 'https://github.com/Project-Sloth/ps-ui'
 
 credits 'https://github.com/sharkiller/nopixel_minigame'
 
-'
+lua54 'yes'
 
 client_scripts {
   'client/*.lua',

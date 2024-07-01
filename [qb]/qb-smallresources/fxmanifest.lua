@@ -1,6 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
-'
+lua54 'yes'
+
 use_experimental_fxv2_oal 'yes'
 author 'Kakarot'
 description 'Various small code snippets compiled into one resource for ease of use'

@@ -2,7 +2,7 @@
 fx_version 'cerulean'
 
 game 'gta5'
-
+lua54 'yes'
 version '1.1.4'
 
 shared_script 'config.lua'
@@ -13,7 +13,7 @@ server_scripts{
 }
 
 ui_page 'html/index.html'
-'
+
 files {
 	'html/*',
 }

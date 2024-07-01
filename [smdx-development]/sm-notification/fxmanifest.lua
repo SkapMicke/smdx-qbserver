@@ -5,7 +5,7 @@ game 'gta5'
 author 'SkapMicke'
 description 'Notification script for QBCore'
 version '1.1'
-'
+
 
 ui_page 'html/ui.html'
 

@@ -1,6 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
-'
+lua54 'yes'
+lua54 'yes'
 author 'Kakarot'
 description 'Core resource for the framework, contains all the core functionality and features'
 version '1.2.6'

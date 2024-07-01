@@ -1,5 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 shared_script {
 	'config.lua',
 	--'@qb-ambulancejob/config.lua'
@@ -17,7 +18,7 @@ files {
 	'html/fonts/*.ttf'
 }
 
-'
+
 
 exports {
     'OpenDeathScreen',

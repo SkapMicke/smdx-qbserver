@@ -1,5 +1,6 @@
 fx_version "cerulean"
 game "gta5"
+lua54 'yes'
 version "v1.0.3"
 
 ui_page "nui/index.html"
@@ -27,4 +28,4 @@ server_scripts {
 	"server.lua",
 }
 
-'
+

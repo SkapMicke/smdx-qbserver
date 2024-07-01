@@ -1,6 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
-'
+lua54 'yes'
+
 use_experimental_fxv2_oal 'yes'
 author 'BerkieB'
 description 'Allows players to interact with various objects and entities in the world'

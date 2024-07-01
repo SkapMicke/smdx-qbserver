@@ -1,9 +1,10 @@
 fx_version 'cerulean'
 
 game 'gta5'
+lua54 'yes'
 
 description 'QbCore Chat Made by Loyalty DeadShot'
-'
+
 ui_page 'html/index.html'
 
 client_scripts {

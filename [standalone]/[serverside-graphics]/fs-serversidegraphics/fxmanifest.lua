@@ -1,13 +1,14 @@
 -- Define FX and Game Version
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
 -- Manifest Metadata
 author '⸸♱♥IDK_FORCE♥♱⸸#7611'
 version '1.0.2'
 description 'Enhanced Server-Side Graphics For An Immersive Experience'
 this_is_a_map 'yes'
-'
+
 
 -- Included Files
 files {

@@ -5,7 +5,7 @@ version '1.0.0'
 description 'A basic resource for storing player identifiers.'
 author 'Cfx.re <root@cfx.re>'
 repository 'https://github.com/citizenfx/cfx-server-data'
-'
+
 fx_version 'bodacious'
 game 'common'
 
