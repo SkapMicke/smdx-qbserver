@@ -1,3 +1,4 @@
+DISCORD SERVER: https://discord.gg/NKaDpHKkkH
 # Thank you for purchasing our server!
 
 ## Acknowledgements
