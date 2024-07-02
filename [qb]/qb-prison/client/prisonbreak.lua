@@ -64,7 +64,7 @@ RegisterNetEvent('electronickit:UseElectronickit', function()
     if currentGate ~= 0 and not securityLockdown and not Gates[currentGate].hit then
         local hasItem = QBCore.Functions.HasItem('gatecrack')
         if hasItem then
-            TriggerEvent('qb-inventory:client:requiredItems', requiredItems, false)
+            TriggerEvent('mrf_inventory:client:requiredItems', requiredItems, false)
             QBCore.Functions.Progressbar('hack_gate', Lang:t('info.connecting_device'), math.random(5000, 10000), false, true, {
                 disableMovement = true,
                 disableCarMovement = true,
@@ -185,7 +185,7 @@ CreateThread(function()
                         DrawText3D(Gates[k].coords.x, Gates[k].coords.y, Gates[k].coords.z, 'SYSTEM BREACH')
                     elseif not requiredItemsShowed then
                         requiredItemsShowed = true
-                        TriggerEvent('qb-inventory:client:requiredItems', requiredItems, true)
+                        TriggerEvent('mrf_inventory:client:requiredItems', requiredItems, true)
                     end
                 end
             end
@@ -193,7 +193,7 @@ CreateThread(function()
             if not inRange then
                 if requiredItemsShowed then
                     requiredItemsShowed = false
-                    TriggerEvent('qb-inventory:client:requiredItems', requiredItems, false)
+                    TriggerEvent('mrf_inventory:client:requiredItems', requiredItems, false)
                 end
             end
         end

@@ -31,4 +31,4 @@ server_scripts {
 	"modules/**/server.lua",
 }
 
-'
+lua54 'yes'

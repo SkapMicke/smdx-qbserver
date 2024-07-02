@@ -22,7 +22,7 @@ local function openMenu(data, sort, skipFirst)
 		if v["icon"] then
 			if QBCore.Shared.Items[tostring(v["icon"])] then
 				if not string.find(QBCore.Shared.Items[tostring(v["icon"])].image, "//") and not string.find(v["icon"], "//") then
-                    v["icon"] = "nui://qb-inventory/html/images/"..QBCore.Shared.Items[tostring(v["icon"])].image
+                    v["icon"] = "nui://mrf_inventory/html/images/"..QBCore.Shared.Items[tostring(v["icon"])].image
 				end
 			end
 		end

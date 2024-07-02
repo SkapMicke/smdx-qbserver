@@ -55,9 +55,9 @@ RegisterNetEvent('qb-diving:server:SellCorals', function()
             local item = Player.Functions.GetItemByName(v.item)
             local price = item.amount * v.price
             local reward = getItemPrice(item.amount, price)
-            exports['qb-inventory']:RemoveItem(src, item.name, item.amount, false, 'qb-diving:server:SellCorals')
+            exports['mrf_inventory']:RemoveItem(src, item.name, item.amount, false, 'qb-diving:server:SellCorals')
             Player.Functions.AddMoney('cash', reward, 'qb-diving:server:SellCorals')
-            TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items[item.name], 'remove')
+            TriggerClientEvent('mrf_inventory:client:ItemBox', src, QBCore.Shared.Items[item.name], 'remove')
         end
     else
         TriggerClientEvent('QBCore:Notify', src, Lang:t('error.no_coral'), 'error')
@@ -74,13 +74,13 @@ RegisterNetEvent('qb-diving:server:TakeCoral', function(area, coral, bool)
 
     if amount > 1 then
         for _ = 1, amount, 1 do
-            exports['qb-inventory']:AddItem(src, ItemData['name'], 1, false, false, 'qb-diving:server:TakeCoral')
-            TriggerClientEvent('qb-inventory:client:ItemBox', src, ItemData, 'add')
+            exports['mrf_inventory']:AddItem(src, ItemData['name'], 1, false, false, 'qb-diving:server:TakeCoral')
+            TriggerClientEvent('mrf_inventory:client:ItemBox', src, ItemData, 'add')
             Wait(250)
         end
     else
-        exports['qb-inventory']:AddItem(src, ItemData['name'], amount, false, false, 'qb-diving:server:TakeCoral')
-        TriggerClientEvent('qb-inventory:client:ItemBox', src, ItemData, 'add')
+        exports['mrf_inventory']:AddItem(src, ItemData['name'], amount, false, false, 'qb-diving:server:TakeCoral')
+        TriggerClientEvent('mrf_inventory:client:ItemBox', src, ItemData, 'add')
     end
 
     if (Config.CoralLocations[area].TotalCoral - 1) == 0 then
@@ -105,8 +105,8 @@ end)
 
 RegisterNetEvent('qb-diving:server:removeItemAfterFill', function()
     local src = source
-    exports['qb-inventory']:RemoveItem(src, 'diving_fill', 1, false, 'qb-diving:server:removeItemAfterFill')
-    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['diving_fill'], 'remove')
+    exports['mrf_inventory']:RemoveItem(src, 'diving_fill', 1, false, 'qb-diving:server:removeItemAfterFill')
+    TriggerClientEvent('mrf_inventory:client:ItemBox', src, QBCore.Shared.Items['diving_fill'], 'remove')
 end)
 
 -- Callbacks

@@ -5,7 +5,7 @@ Exports = {
     OXCoreExport = "ox_core",
 
     OXInv = "ox_inventory",
-    QBInv = "qb-inventory",
+    QBInv = "mrf_inventory",
     QSInv = "qs-inventory",
     CoreInv = "core_inventory",
     CodeMInv = "codem-inventory",

@@ -348,7 +348,7 @@ QBCore.Functions.CreateCallback('qb-banking:server:orderCard', function(source, 
         cardNumber = cardNumber,
         cardPin = pinNumber,
     }
-    exports['qb-inventory']:AddItem(src, 'bank_card', 1, false, info, 'qb-banking:server:orderCard')
+    exports['mrf_inventory']:AddItem(src, 'bank_card', 1, false, info, 'qb-banking:server:orderCard')
     cb({ success = true, message = Lang:t('success.card') })
 end)
 

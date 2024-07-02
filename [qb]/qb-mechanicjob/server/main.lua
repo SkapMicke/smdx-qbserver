@@ -106,7 +106,7 @@ RegisterNetEvent('qb-mechanicjob:server:stash', function(data)
     local stashCoords = Config.Shops[shopName].stash
     if #(playerCoords - stashCoords) < 2.5 then
         local stashName = shopName .. '_stash'
-        exports['qb-inventory']:OpenInventory(src, stashName, {
+        exports['mrf_inventory']:OpenInventory(src, stashName, {
             maxweight = 4000000,
             slots = 100,
         })
@@ -244,8 +244,8 @@ RegisterNetEvent('qb-mechanicjob:server:removeItem', function(part, amount)
     local Player = QBCore.Functions.GetPlayer(src)
     if not Player then return end
     if not amount then amount = 1 end
-    if not exports['qb-inventory']:RemoveItem(src, part, amount, false, 'qb-mechanicjob:server:removeItem') then DropPlayer(src, 'qb-mechanicjob:server:removeItem') end
-    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items[part], 'remove')
+    if not exports['mrf_inventory']:RemoveItem(src, part, amount, false, 'qb-mechanicjob:server:removeItem') then DropPlayer(src, 'qb-mechanicjob:server:removeItem') end
+    TriggerClientEvent('mrf_inventory:client:ItemBox', src, QBCore.Shared.Items[part], 'remove')
 end)
 
 -- Items

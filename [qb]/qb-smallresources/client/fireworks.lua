@@ -114,7 +114,7 @@ RegisterNetEvent('fireworks:client:UseFirework', function(itemName, assetName)
     }, {}, {}, function() -- Done
         StopAnimTask(PlayerPedId(), 'anim@narcotics@trash', 'drop_front', 1.0)
         TriggerServerEvent('consumables:server:UseFirework', itemName)
-        TriggerEvent('qb-inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
+        TriggerEvent('mrf_inventory:client:ItemBox', QBCore.Shared.Items[itemName], 'remove')
         local pos = GetEntityCoords(PlayerPedId())
         startFirework(assetName, pos)
     end, function() -- Cancel

@@ -11,7 +11,7 @@ A highly in-depth fuel system for **FiveM** with support for the **QBCore Framew
 - Removed spamming debug print. 
 - Changed the way Air Fuel Zones spawn PolyZones and Props.
 - Player Job Error on load.
-- Syphoning Issue with QB-Inventory.
+- Syphoning Issue with mrf_inventory.
 
 
 <br>

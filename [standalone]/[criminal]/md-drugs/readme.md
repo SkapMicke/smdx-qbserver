@@ -43,7 +43,7 @@
 
 - [QBCore](https://github.com/qbcore-framework/qb-core)
 
-- [ps inventory](https://github.com/Project-Sloth/ps-inventory) **or** [qb inventory](https://github.com/qbcore-framework/qb-inventory) **or** Ox_inventory
+- [ps inventory](https://github.com/Project-Sloth/ps-inventory) **or** [qb inventory](https://github.com/qbcore-framework/mrf_inventory) **or** Ox_inventory
   
 - [ps-buffs](https://github.com/Project-Sloth/ps-buffs) -- only for pharma consumbles, can easily comment out in client
   
@@ -531,7 +531,7 @@ xtcburner 				     = {name = 'xtcburner', 			    	label = 'ENV Burner', 		    		
 
 - **STEP 2**
 
-	- Add items images to `qb-inventory/html/images`
+	- Add items images to `mrf_inventory/html/images`
 
 - **STEP 3**
 

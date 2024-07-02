@@ -35,10 +35,10 @@ In exports.lua is the list of script folder names
 
 This is for people who have customised/renamed scripts
 
-eg. for people who use `ps-inventory`, this is mainly based on qb-inventory
+eg. for people who use `ps-inventory`, this is mainly based on mrf_inventory
 so you need to rename
 ```lua
-    QBInv = "qb-inventory",
+    QBInv = "mrf_inventory",
 ```
 to
 ```lua

@@ -49,7 +49,7 @@ end
 --- @param show boolean
 --- @return nil
 function Config.ShowRequiredItems(items, show)
-    TriggerEvent('qb-inventory:client:requiredItems', items, show)
+    TriggerEvent('mrf_inventory:client:requiredItems', items, show)
 end
 
 Config.MinimumPaletoPolice = 0

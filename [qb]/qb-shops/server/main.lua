@@ -41,7 +41,7 @@ local function deliveryPay(source, shop)
     local distance = #(playerCoords - vector3(deliverCoords.x, deliverCoords.y, deliverCoords.z))
     if distance > 10 then return end
     Player.Functions.AddMoney('bank', Config.DeliveryPrice, 'qb-shops:deliveryPay')
-    if math.random(100) <= 10 then exports['qb-inventory']:AddItem(source, Config.RewardItem, 1, false, false, 'qb-shops:deliveryPay') end
+    if math.random(100) <= 10 then exports['mrf_inventory']:AddItem(source, Config.RewardItem, 1, false, false, 'qb-shops:deliveryPay') end
 end
 
 -- Events
@@ -163,12 +163,12 @@ RegisterNetEvent('qb-shops:server:openShop', function(data)
         end
     end
 
-    exports['qb-inventory']:CreateShop({
+    exports['mrf_inventory']:CreateShop({
         name = shopName,
         label = shopData.label,
         slots = shopData.slots,
         coords = shopData.coords,
         items = items,
     })
-    exports['qb-inventory']:OpenShop(src, shopName)
+    exports['mrf_inventory']:OpenShop(src, shopName)
 end)

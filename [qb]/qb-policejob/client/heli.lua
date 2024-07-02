@@ -1,3 +1,5 @@
+QBCore = exports['qb-core']:GetCoreObject()
+
 local fov_max = 80.0
 local fov_min = 10.0        -- max zoom level (smaller fov is more zoom)
 local zoomspeed = 2.0       -- camera zoom speed
