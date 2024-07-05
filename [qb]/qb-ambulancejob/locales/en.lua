@@ -32,20 +32,21 @@ local Translations = {
         bleed_out_help = 'YOU WILL BLEED OUT IN: ~r~%{time}~s~ SECONDS, YOU CAN BE HELPED',
         request_help = 'PRESS [~r~G~s~] TO REQUEST HELP',
         help_requested = 'EMS PERSONNEL HAVE BEEN NOTIFIED',
-        amb_plate = 'AMBU', -- Should only be 4 characters long due to the last 4 being a random 4 digits
-        heli_plate = 'LIFE',  -- Should only be 4 characters long due to the last 4 being a random 4 digits
+        amb_plate = 'AMBU',  -- Should only be 4 characters long due to the last 4 being a random 4 digits
+        heli_plate = 'LIFE', -- Should only be 4 characters long due to the last 4 being a random 4 digits
         status = 'Status Check',
-        is_staus = 'Is %{status}',
+        is_status = 'Is %{status}',
         healthy = 'You are completely healthy again!',
         safe = 'Hospital Safe',
         pb_hospital = 'Pillbox Hospital',
+        paleto_hospital = 'Paleto Hospital',
         pain_message = 'Your %{limb} feels %{severity}',
         many_places = 'You have pain in many places...',
         bleed_alert = 'You are %{bleedstate}',
         ems_alert = 'EMS Alert - %{text}',
         mr = 'Mr.',
         mrs = 'Mrs.',
-        dr_needed = 'A doctor is needed at Pillbox Hospital',
+        dr_needed = 'A doctor is needed at %{hospital}',
         ems_report = 'EMS Report',
         message_sent = 'Message to be sent',
         check_health = 'Check a Players Health',
@@ -58,7 +59,6 @@ local Translations = {
         heal_player_a = 'Heal A Player or Yourself (Admin Only)',
     },
     mail = {
-        sender = 'Pillbox Hospital',
         subject = 'Hospital Costs',
         message = 'Dear %{gender} %{lastname}, <br /><br />Hereby you received an email with the costs of the last hospital visit.<br />The final costs have become: <strong>$%{costs}</strong><br /><br />We wish you a quick recovery!'
     },
@@ -122,8 +122,8 @@ local Translations = {
         checking_in = 'Checking in...',
     },
     logs = {
-        death_log_title = "%{playername} (%{playerid}) is dead",
-        death_log_message = "%{killername} has killed %{playername} with a **%{weaponlabel}** (%{weaponname})",
+        death_log_title = '%{playername} (%{playerid}) is dead',
+        death_log_message = '%{killername} has killed %{playername} with a **%{weaponlabel}** (%{weaponname})',
     }
 }
 

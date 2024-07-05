@@ -21,7 +21,6 @@ In the QB folder, you will find all the original QBCore scripts with some modifi
 - **qb-core:**
   - `functions.lua`: Modified for our notifications
   - `config.lua`: Modified for md-drugs
-- **qb-ambulancejob:** Modified for the death screen. To revert to the original, remove "majestic-deathscreen" and redownload qb-ambulancejob.
 - **qb-doorlock:** Removed and replaced with `ox_doorlock`, now located in Standalone.
 - **qb-hud:** Removed and replaced with `cc-hud`, now located in Standalone.
 - **qb-smallresources:** Removed the coke lab and added Discord rich presence.
