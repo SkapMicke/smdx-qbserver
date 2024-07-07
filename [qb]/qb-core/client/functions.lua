@@ -33,7 +33,7 @@ function QBCore.Functions.GetCoords(entity)
 end
 
 function QBCore.Functions.HasItem(items, amount)
-    return exports['mrf_inventory']:HasItem(items, amount)
+    return exports['qb-inventory']:HasItem(items, amount)
 end
 
 ---@param entity number - The entity to look at

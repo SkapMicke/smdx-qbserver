@@ -148,7 +148,7 @@ local function tableCheck(inputValue, requiredValue)
     end
 
     if shopData.requiredItem then
-        itemCheck = exports['mrf_inventory']:HasItem(shopData.requiredItem)
+        itemCheck = exports['qb-inventory']:HasItem(shopData.requiredItem)
     else
         itemCheck = true
     end

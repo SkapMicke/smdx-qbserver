@@ -35,7 +35,7 @@ Config = {
     resources = {
         inventory = {
             ox = 'ox_inventory',
-            qb = 'mrf_inventory',
+            qb = 'qb-inventory',
             ps = 'ps-inventory',
             qs = 'qs-inventory'
         },

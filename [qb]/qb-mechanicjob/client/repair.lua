@@ -2,7 +2,7 @@
 
 local function RepairPart(vehicle, plate, component)
     local materials = Config.WearableParts[component].repair
-    local hasItems = exports['mrf_inventory']:HasItem(materials)
+    local hasItems = exports['qb-inventory']:HasItem(materials)
     if not hasItems then
         QBCore.Functions.Notify(Lang:t('warning.no_materials'), 'error')
         return

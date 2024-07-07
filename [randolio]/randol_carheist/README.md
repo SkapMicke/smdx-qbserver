@@ -24,7 +24,7 @@ For ox_inventory, add this to your items.lua:
     }
 },
 ```
-For mrf_inventory, add this to your items.lua
+For qb-inventory, add this to your items.lua
 ```lua
 heist_papers = {
     name = 'heist_papers',

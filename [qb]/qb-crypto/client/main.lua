@@ -64,7 +64,7 @@ CreateThread(function()
 						DrawText3Ds(Crypto.Exchange.coords, Lang:t('text.enter_usb'))
 						if not requiredItemsShowed then
 							requiredItemsShowed = true
-							TriggerEvent('mrf_inventory:client:requiredItems', requiredItems, true)
+							TriggerEvent('qb-inventory:client:requiredItems', requiredItems, true)
 						end
 
 						if IsControlJustPressed(0, 38) then
@@ -87,7 +87,7 @@ CreateThread(function()
 				else
 					if requiredItemsShowed then
 						requiredItemsShowed = false
-						TriggerEvent('mrf_inventory:client:requiredItems', requiredItems, false)
+						TriggerEvent('qb-inventory:client:requiredItems', requiredItems, false)
 					end
 				end
 			end

@@ -188,7 +188,7 @@ end)
 
 -- This event is exploitable and should not be used. It has been deprecated, and will be removed soon.
 RegisterNetEvent('QBCore:Server:UseItem', function(item)
-    print(string.format('%s triggered QBCore:Server:UseItem by ID %s with the following data. This event is deprecated due to exploitation, and will be removed soon. Check mrf_inventory for the right use on this event.', GetInvokingResource(), source))
+    print(string.format('%s triggered QBCore:Server:UseItem by ID %s with the following data. This event is deprecated due to exploitation, and will be removed soon. Check qb-inventory for the right use on this event.', GetInvokingResource(), source))
     QBCore.Debug(item)
 end)
 
@@ -242,5 +242,5 @@ QBCore.Functions.CreateCallback('QBCore:Server:CreateVehicle', function(source, 
 end)
 
 --QBCore.Functions.CreateCallback('QBCore:HasItem', function(source, cb, items, amount)
--- https://github.com/qbcore-framework/mrf_inventory/blob/e4ef156d93dd1727234d388c3f25110c350b3bcf/server/main.lua#L2066
+-- https://github.com/qbcore-framework/qb-inventory/blob/e4ef156d93dd1727234d388c3f25110c350b3bcf/server/main.lua#L2066
 --end)

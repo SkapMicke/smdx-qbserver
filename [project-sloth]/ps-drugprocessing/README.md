@@ -60,7 +60,7 @@ https://streamable.com/0pcjlt
 
 # Add icon images
 
-mrf_inventory > html > images
+qb-inventory > html > images
 
 # Dependencies
 * [PolyZone](https://github.com/mkafrin/PolyZone)

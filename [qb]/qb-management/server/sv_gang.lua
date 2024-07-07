@@ -44,7 +44,7 @@ RegisterNetEvent('qb-gangmenu:server:stash', function()
 		local coords = bossCoords[i]
 		if #(playerCoords - coords) < 2.5 then
 			local stashName = 'boss_' .. playerGang.name
-			exports['mrf_inventory']:OpenInventory(src, stashName, {
+			exports['qb-inventory']:OpenInventory(src, stashName, {
 				maxweight = 4000000,
 				slots = 25,
 			})

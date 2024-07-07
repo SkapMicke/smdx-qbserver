@@ -225,13 +225,13 @@ RegisterNetEvent('qb-houses:server:openStash', function(CurrentHouse)
     local stashSlots = Config.StashWeights[houseTier].slots
     local stashWeight = Config.StashWeights[houseTier].maxweight
     if stashSlots and stashWeight then
-        exports['mrf_inventory']:OpenInventory(src, CurrentHouse, {
+        exports['qb-inventory']:OpenInventory(src, CurrentHouse, {
             maxweight = stashWeight,
             slots = stashSlots,
             label = houseData.adress
         })
     else
-        exports['mrf_inventory']:OpenInventory(src, CurrentHouse)
+        exports['qb-inventory']:OpenInventory(src, CurrentHouse)
     end
 end)
 
