@@ -81,23 +81,51 @@ local function robKeyLoop()
                 end
 
                 -- Hotwiring while in vehicle, also keeps engine off for vehicles you don't own keys to
-                if IsPedInAnyVehicle(ped, false) and not IsHotwiring then
-                    sleep = 1000
-                    local vehicle = GetVehiclePedIsIn(ped)
-                    local plate = QBCore.Functions.GetPlate(vehicle)
+                local ped = PlayerPedId()
+                local sleep = 1000
+                
+                if Config.Hotwiring.Enabled then
+                    if IsPedInAnyVehicle(ped, false) and not IsHotwiring then
+                        local vehicle = GetVehiclePedIsIn(ped)
+                        local plate = QBCore.Functions.GetPlate(vehicle)
+                
+                        if GetPedInVehicleSeat(vehicle, -1) == PlayerPedId() and not HasKeys(plate) and not isBlacklistedVehicle(vehicle) and not AreKeysJobShared(vehicle) then
+                            sleep = 0
+                
 
-                    if GetPedInVehicleSeat(vehicle, -1) == PlayerPedId() and not HasKeys(plate) and not isBlacklistedVehicle(vehicle) and not AreKeysJobShared(vehicle) then
-                        sleep = 0
-
-                        local vehiclePos = GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.0, 0.5)
-                        DrawText3D(vehiclePos.x, vehiclePos.y, vehiclePos.z, Lang:t('info.skeys'))
-                        SetVehicleEngineOn(vehicle, false, false, true)
-
-                        if IsControlJustPressed(0, 74) then
-                            Hotwire(vehicle, plate)
+                
+                            if IsControlJustPressed(0, 74) then
+                                local success
+                                if Config.Hotwiring.Minigame == 'Skillbar' then
+                                    success = exports['qb-minigames']:Skillbar(difficulty)
+                                elseif Config.Hotwiring.Minigame == 'Thermite' then
+                                    exports['ps-ui']:Thermite(function(result)
+                                        success = result
+                                    end, Config.ThermiteOptions.Time, Config.ThermiteOptions.GridSize, Config.ThermiteOptions.IncorrectBlocks)
+                                    while success == nil do
+                                        Citizen.Wait(0)
+                                    end
+                                elseif Config.Hotwiring.Minigame == 'Scrambler' then
+                                    exports['ps-ui']:Scrambler(function(result)
+                                        success = result
+                                    end, Config.ScramblerOptions.Type, Config.ScramblerOptions.Time, Config.ScramblerOptions.Mirrored)
+                                    while success == nil do
+                                        Citizen.Wait(0)
+                                    end
+                                else
+                                    print("Error: Invalid minigame configuration")
+                                    return
+                                end
+                
+                                if success then
+                                    Hotwire(vehicle, plate)
+                                end
+                            end
                         end
                     end
                 end
+                
+                Citizen.Wait(sleep)                
 
                 if Config.CarJackEnable and canCarjack then
                     local playerid = PlayerId()
@@ -272,7 +300,28 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
     if GetVehicleDoorLockStatus(vehicle) <= 0 then return end
 
     local difficulty = isAdvanced and 'easy' or 'medium' -- Easy for advanced lockpick, medium by default
-    local success = exports['qb-minigames']:Skillbar(difficulty)
+
+    local success
+    if Config.Minigame == 'Skillbar' then
+        success = exports['qb-minigames']:Skillbar(difficulty)
+    elseif Config.Minigame == 'Thermite' then
+        exports['ps-ui']:Thermite(function(result)
+            success = result
+        end, Config.ThermiteOptions.Time, Config.ThermiteOptions.GridSize, Config.ThermiteOptions.IncorrectBlocks)
+        while success == nil do
+            Citizen.Wait(0)
+        end
+    elseif Config.Minigame == 'Scrambler' then
+        exports['ps-ui']:Scrambler(function(result)
+            success = result
+        end, Config.ScramblerOptions.Type, Config.ScramblerOptions.Time, Config.ScramblerOptions.Mirrored)
+        while success == nil do
+            Citizen.Wait(0)
+        end
+    else
+        print("Error: Invalid minigame configuration")
+        return
+    end
 
     local chance = math.random()
     if success then
@@ -300,6 +349,7 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
         end
     end
 end)
+
 -- Backwards Compatibility ONLY -- Remove at some point --
 RegisterNetEvent('vehiclekeys:client:SetOwner', function(plate)
     TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', plate)

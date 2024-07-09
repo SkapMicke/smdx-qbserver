@@ -12,13 +12,34 @@ Config.LockAnimSound = "keys"
 Config.LockToggleSound = "lock"
 Config.LockToggleDist = 8.0
 
+
+Config.Minigame = 'Thermite'  --Alternatives: 'Skillbar', 'Thermite', 'Scrambler'
+
+Config.ThermiteOptions = {
+    Time = 10,
+    GridSize = 5,
+    IncorrectBlocks = 3
+}
+
+Config.ScramblerOptions = {
+    Type = "numeric",  -- Alternatives: 'alphabet', 'numeric', 'alphanumeric', 'greek', 'braille', 'runes'
+    Time = 30,
+    Mirrored = 0       -- Alternatives: 0: Normal, 1: Normal + Mirrored, 2: Mirrored only
+}
+
+Config.Hotwiring = {
+    Enabled = true,  -- Aktivera eller inaktivera hotwiring-funktionen
+    Minigame = 'Thermite'  -- Typ av minigame: 'Skillbar', 'Thermite', 'Scrambler'
+}
+
+
 -- NPC Vehicle Lock States
 Config.LockNPCDrivingCars = true -- Lock state for NPC cars being driven by NPCs [true = locked, false = unlocked]
 Config.LockNPCParkedCars = true -- Lock state for NPC parked cars [true = locked, false = unlocked]
 Config.UseKeyfob = false -- you can set this true if you dont need ui
 -- Lockpick Settings
 Config.RemoveLockpickNormal = 0.5 -- Chance to remove lockpick on fail
-Config.RemoveLockpickAdvanced = 0.2 -- Chance to remove advanced lockpick on fail
+Config.RemoveLockpickAdvanced = 0.010 -- Chance to remove advanced lockpick on fail
 -- Carjack Settings
 Config.CarJackEnable = true -- True allows for the ability to car jack peds.
 Config.CarjackingTime = 7500 -- How long it takes to carjack

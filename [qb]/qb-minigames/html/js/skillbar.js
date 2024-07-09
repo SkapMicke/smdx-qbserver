@@ -17,9 +17,9 @@ const config = {
 
 const difficultySettings = {
     easy: {
-        greenZoneSize: 10, // adjust this in small increments
-        speed: 15,
-        streaksRequired: 3,
+        greenZoneSize: 5, // adjust this in small increments
+        speed: 10,
+        streaksRequired: 1,
     },
     medium: {
         greenZoneSize: 8,
