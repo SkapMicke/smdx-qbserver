@@ -13,24 +13,63 @@ Config.LockToggleSound = "lock"
 Config.LockToggleDist = 8.0
 
 
-Config.Minigame = 'Thermite'  --Alternatives: 'Skillbar', 'Thermite', 'Scrambler'
+-- config.lua
 
-Config.ThermiteOptions = {
-    Time = 10,
-    GridSize = 5,
-    IncorrectBlocks = 3
+Config = {}
+
+Config.Minigame = 'Skillbar' -- Skillbar, Thermite, Scrambler, VarHack, Maze, Circle.
+
+Config.Skillbar = {
+    Type = 'Skillbar',
+    Difficulty = {
+        Easy = 'easy',
+        Medium = 'medium'
+    }
 }
 
-Config.ScramblerOptions = {
-    Type = "numeric",  -- Alternatives: 'alphabet', 'numeric', 'alphanumeric', 'greek', 'braille', 'runes'
-    Time = 30,
-    Mirrored = 0       -- Alternatives: 0: Normal, 1: Normal + Mirrored, 2: Mirrored only
+Config.Thermite = {
+    Type = 'Thermite',
+    Options = {
+        Time = 5, -- Example value
+        GridSize = 5,
+        IncorrectBlocks = 2
+    }
 }
 
-Config.Hotwiring = {
-    Enabled = true,  -- Aktivera eller inaktivera hotwiring-funktionen
-    Minigame = 'Thermite'  -- Typ av minigame: 'Skillbar', 'Thermite', 'Scrambler'
+Config.Scrambler = {
+    Type = 'Scrambler',
+    Options = {
+        Type = 'numeric', -- Type (alphabet, numeric, alphanumeric, greek, braille, runes), Time (Seconds)
+        Time = 5, -- Example value
+        Mirrored = false
+    }
 }
+
+Config.VarHack = {
+    Type = 'VarHack',
+    Options = {
+        NumberOfBlocks = 4, -- Example value
+        TimeLimit = 60
+    }
+}
+
+Config.Maze = {
+    Type = 'Maze',
+    Options = {
+        TimeLimit = 60 -- Example value
+    }
+}
+
+Config.Circle = {
+    Type = 'Circle',
+    Options = {
+        NumberOfCircles = 3, -- Example value
+        TimeLimitMS = 30000
+    }
+}
+
+Config.RemoveLockpickAdvanced = 0.1 -- Example value
+Config.RemoveLockpickNormal = 0.2 -- Example value
 
 
 -- NPC Vehicle Lock States
@@ -39,7 +78,7 @@ Config.LockNPCParkedCars = true -- Lock state for NPC parked cars [true = locked
 Config.UseKeyfob = false -- you can set this true if you dont need ui
 -- Lockpick Settings
 Config.RemoveLockpickNormal = 0.5 -- Chance to remove lockpick on fail
-Config.RemoveLockpickAdvanced = 0.010 -- Chance to remove advanced lockpick on fail
+Config.RemoveLockpickAdvanced = 0.2 -- Chance to remove advanced lockpick on fail
 -- Carjack Settings
 Config.CarJackEnable = true -- True allows for the ability to car jack peds.
 Config.CarjackingTime = 7500 -- How long it takes to carjack

@@ -765,7 +765,7 @@ weedkey 					 = {name = 'weedkey', 						label = 'Key C', 				    weight = 200, 
 finescale 					 = {name = 'finescale', 					label = 'Fine Scale', 			    weight = 200, 		type = 'item', 		image = 'finescale.png', 			unique = false, 	useable = false, 	shouldClose = false,   combinable = nil,   description = 'Scale Used for Fine Powders and Materials.'},
 coke_small_brick 		 	 = {name = 'coke_small_brick', 				label = 'Coke Package', 			weight = 350, 		type = 'item', 		image = 'coke_small_brick.png', 	unique = false, 	useable = false, 	shouldClose = true,	   combinable = nil,   description = 'Small package of cocaine, mostly used for deals and takes a lot of space'},
 
-heist_papers 		 	 = {name = 'heist_papers', 				label = 'Heist Papers', 			weight = 350, 		type = 'item', 		image = 'heist_papers.png', 	unique = false, 	useable = false, 	shouldClose = true,	   combinable = nil,   description = ''},
+    heist_papers 		 	 = {name = 'heist_papers', 				label = 'Heist Papers', 			weight = 350, 		type = 'item', 		image = 'heist_papers.png', 	unique = false, 	useable = false, 	shouldClose = true,	   combinable = nil,   description = ''},
 
 rag                         = { name = 'rag', label = 'Rag', weight = 100, type = 'item', image = 'rag.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Could get Handy.' },
 evidencecleaningkit         = { name = 'evidencecleaningkit', label = 'Evidence Cleaning Kit', weight = 250, type = 'item', image = 'cleaningkit.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Cleans every Evidence near a police Officer.' },
