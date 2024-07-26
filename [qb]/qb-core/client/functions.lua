@@ -152,28 +152,25 @@ end
 
 -- NUI Calls
 
-function QBCore.Functions.Notify(text, texttype, length)
-    if type(text) == "table" then
-        local ttext = text.text or 'Placeholder'
-        local caption = text.caption or 'Placeholder'
-        texttype = texttype or 'success'
-        length = length or 5000
-        exports['sm-notification']:sm_SendNotify({
-            ["label"] = caption,
-            ["text"] = ttext,
-            ["time"] = length,
-            ["type"] = texttype
-        })
+function QBCore.Functions.Notify(text, texttype, length, icon)
+    local message = {
+        action = 'notify',
+        type = texttype or 'primary',
+        length = length or 5000,
+    }
+
+    if type(text) == 'table' then
+        message.text = text.text or 'Placeholder'
+        message.caption = text.caption or 'Placeholder'
     else
-        texttype = texttype or 'success'
-        length = length or 5000
-        exports['sm-notification']:sm_SendNotify({
-            ["label"] = label,
-            ["text"] = text,
-            ["time"] = length,
-            ["type"] = texttype
-        })
+        message.text = text
     end
+
+    if icon then
+        message.icon = icon
+    end
+
+    SendNUIMessage(message)
 end
 
 function QBCore.Functions.Progressbar(name, label, duration, useWhileDead, canCancel, disableControls, animation, prop, propTwo, onFinish, onCancel)

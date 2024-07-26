@@ -1,71 +1,92 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
-
-html {
-    overflow: hidden;
-    font-family: "Poppins", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-    background: transparent !important;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
 }
 
 .progress-container {
     display: none;
-    z-index: 5;
-    color: #fff;
-    width: 15%;
     position: fixed;
-    bottom: 15%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Poppins", sans-serif;
-}
-
-.progress-labels {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #000, #333);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6), 0 0 12px rgba(255, 0, 0, 0.6), 0 0 12px rgba(255, 0, 0, 0.6);
+    border: 2px solid #000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.9;
+    animation: slideIn 0.5s ease-out;
 }
 
 #progress-label {
-    font-size: 1.3vh;
-    line-height: 4vh;
-    position: relative;
+    font-size: 1.2em;
+    line-height: 1.2em;
     color: #ffffff;
-    z-index: 10;
     font-weight: bold;
-}
-
-#progress-percentage {
-    font-size: 1.3vh;
-    line-height: 4vh;
-    position: relative;
-    color: #ffffff;
-    z-index: 10;
-    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .progress-bar-container {
-    background: rgba(0, 0, 0, 0.246);
-    height: 0.5vh;
-    position: relative;
-    display: block;
-    border-radius: 2px;
+    background: #444;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.8);
+    animation: expand 0.5s ease-out;
 }
 
 #progress-bar {
-    background-color: #dc143c;
-    width: 0%;
-    height: 0.5vh;
-    border-radius: 2px;
-    transition: width 0.3s;
-    transition-timing-function: ease-out;
-    box-shadow: 0 0 10px rgba(220, 20, 60, 0.6);
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, #ff0000, #cc0000);
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+    position: relative;
+    animation: glow 1.5s ease infinite, fill 0.5s forwards ease-in-out;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #cc0000, 0 0 30px #ff0000, 0 0 40px #cc0000;
+    }
+    50% {
+        box-shadow: 0 0 10px #cc0000, 0 0 20px #ff0000, 0 0 30px #cc0000, 0 0 40px #ff0000;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%) translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.9;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }

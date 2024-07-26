@@ -1,3 +1,6 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+
+
 local Action = {
     name = '',
     duration = 0,
@@ -130,7 +133,6 @@ local function StartProgress(action, onStart, onTick, onFinish)
     local isPlayerDead = IsEntityDead(playerPed)
     if (not isPlayerDead or action.useWhileDead) and not isDoingAction then
         isDoingAction = true
-        LocalPlayer.state:set('inv_busy', true, true)
         Action = action
         SendNUIMessage({
             action = 'progress',
@@ -250,3 +252,50 @@ local function isDoingSomething()
     return isDoingAction
 end
 exports('isDoingSomething', isDoingSomething)
+
+-- Debug
+-- Assuming QBCore and QBCore.Functions.Progressbar are available
+local QBCore = exports['qb-core']:GetCoreObject()
+
+RegisterCommand('testprogress', function(source, args)
+        QBCore.Functions.Progressbar("attach_car", "Loading", 10000, false, true, {
+            disableMovement = false,
+            disableCarMovement = true,
+            disableMouse = false,
+            disableCombat = true,
+        }, {
+            animDict = "missheistdockssetup1clipboard@idle_a",
+            anim = "idle_a",
+            flags = 49,
+        }, {}, {}, function() -- Done
+            print("lol")
+        end, function() -- Cancel
+            TriggerEvent("chat:addMessage", {
+                color = {255, 0, 0},
+                multiline = true,
+                args = {"System", "Failed to attach the car!"}
+            })
+        end)
+end, false)
+
+
+RegisterCommand('testprogress', function(source, args)
+    QBCore.Functions.Progressbar("attach_car", "Loading", 10000, false, true, {
+        disableMovement = false,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {
+        animDict = "missheistdockssetup1clipboard@idle_a",
+        anim = "idle_a",
+        flags = 49,
+    }, {}, {}, function() -- Done
+        print("lol")
+    end, function() -- Cancel
+        TriggerEvent("chat:addMessage", {
+            color = {255, 0, 0},
+            multiline = true,
+            args = {"System", "Failed to attach the car!"}
+        })
+    end)
+end, false)

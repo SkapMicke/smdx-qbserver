@@ -179,7 +179,7 @@ While the prerequisites above must be satisfied prior to having your pull reques
 All lua code should be done using all the best practices of proper lua using the easiest to read yet fastest/most optimized methods of execution.
 
 - Use 4 Space indentation
-- Aim for lua 5.4 (include `'` in the fxmanifest.lua)
+- Aim for lua 5.4 (include `lua54 'yes'` in the fxmanifest.lua)
 - Use `PlayerPedId()` instead of `GetPlayerPed(-1)`
 - Use `#(vector3 - vector3)` instead of `GetDistanceBetweenCoords()`
 - Don't create unnecessary threads. always try to find a better method of triggering events

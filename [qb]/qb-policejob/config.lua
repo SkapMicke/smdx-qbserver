@@ -6,7 +6,7 @@ Config.LicenseRank = 2
 Config.ArmoryWhitelist = {}
 Config.WhitelistedVehicles = {}
 Config.PoliceHelicopter = 'POLMAV'
-Config.FuelResource = 'cdn-fuel' -- supports any that has a GetFuel() and SetFuel() export
+Config.FuelResource = 'LegacyFuel' -- supports any that has a GetFuel() and SetFuel() export
 
 Config.AmmoLabels = {
     AMMO_PISTOL = '9x19mm parabellum bullet',
@@ -116,6 +116,12 @@ Config.Radars = {
     vector4(2118.287, 6040.027, 50.928, 172.0),
     vector4(-106.304, -1127.5530, 30.778, 230.0),
     vector4(-823.3688, -1146.980, 8.0, 300.0),
+}
+
+Config.CarItems = {
+    [1] = {name = "heavyarmor", amount = 2, info = {}, type = "item", slot = 1,},
+    [2] = {name = "empty_evidence_bag", amount = 10, info = {}, type = "item", slot = 2,},
+    [3] = {name = "police_stormram", amount = 1, info = {}, type = "item", slot = 3,},
 }
 
 Config.AuthorizedVehicles = {
